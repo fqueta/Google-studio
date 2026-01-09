@@ -1,4 +1,4 @@
-# Projeto Mastertech Google Studio
+# Projeto do Novo Site
 
 Este projeto contém tudo o que você precisa para rodar sua aplicação localmente.
 
