@@ -1,0 +1,8 @@
+{
+  "name": "Mastertech - Soluções em TI",
+  "description": "Portfolio moderno para Mastertech Soluções em TI, com foco em desenvolvimento de software e infraestrutura tecnológica.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
