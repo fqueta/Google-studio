@@ -1,14 +1,15 @@
 <IfModule mod_rewrite.c>
-  # Enable Rewrite Engine
   RewriteEngine On
+  RewriteBase /
   
-  # Redirection to HTTPS (Optional - CWP often handles this in vhost, but good to have)
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
-
-  # SPA Routing
-  # Serve index.html for any request that is not a file or directory
+  # Redireciona todas as requisições para o index.html (exceto arquivos reais)
+  
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [QSA,L]
+  RewriteRule ^ index.html [L]
+
+  # Forçar https
+
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
