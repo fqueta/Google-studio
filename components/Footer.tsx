@@ -69,8 +69,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
+        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
           <p>© {new Date().getFullYear()} Mastertech Soluções em TI. Todos os direitos reservados.</p>
+          <div className="flex gap-6">
+            <a href="/politica-de-privacidade" className="hover:text-mt-yellow transition-colors">Política de Privacidade</a>
+            <a href="/termos-de-uso" className="hover:text-mt-yellow transition-colors">Termos de Uso</a>
+          </div>
         </div>
       </div>
     </footer>

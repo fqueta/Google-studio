@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Cpu } from 'lucide-react';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +25,16 @@ const Navbar: React.FC = () => {
     { name: 'Contato', href: '#contact' },
   ];
 
-  // Função para scroll suave manual com offset para a Navbar fixa
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
+
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      setIsOpen(false);
+      return;
+    }
+
     const element = document.getElementById(targetId);
     
     if (element) {
@@ -40,6 +49,7 @@ const Navbar: React.FC = () => {
     }
     setIsOpen(false);
   };
+
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);

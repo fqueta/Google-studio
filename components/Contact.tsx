@@ -195,7 +195,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900">Telefone / WhatsApp</h4>
-                  <a href="tel:3298432685" className="text-slate-500 hover:text-mt-orange transition-colors">(32) 9843-2685</a>
+                  <a href="tel:32998432685" className="text-slate-500 hover:text-mt-orange transition-colors">(32) 99843-2685</a>
                 </div>
               </div>
             </div>
@@ -321,6 +321,10 @@ const Contact: React.FC = () => {
                       <>Enviar Mensagem <Send size={20} aria-hidden="true" /></>
                     )}
                   </button>
+
+                  <p className="text-[10px] text-slate-400 text-center leading-tight">
+                    Ao enviar este formulário, você concorda com nossos <a href="/termos-de-uso" className="underline hover:text-mt-blue">Termos de Uso</a> e <a href="/politica-de-privacidade" className="underline hover:text-mt-blue">Política de Privacidade</a>.
+                  </p>
                 </form>
               </>
             )}

@@ -1,29 +1,27 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SupportButton from './components/SupportButton';
+import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfUse from './components/TermsOfUse';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Portfolio />
-        <Contact />
-      </main>
-      <Footer />
-      <SupportButton />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden flex flex-col">
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+            <Route path="/termos-de-uso" element={<TermsOfUse />} />
+          </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
 export default App;
+
