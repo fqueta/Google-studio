@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a 
-              href="https://glpi-glpi.yadvva.easypanel.host/"
+              href="https://helpdesk.ctloja.com.br/mastertech"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-mt-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-mt-orange hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95 flex items-center justify-center"
