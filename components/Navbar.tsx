@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
           ))}
           <div className="mt-6 px-2">
             <a 
-              href="https://glpi-glpi.yadvva.easypanel.host/"
+              href="https://helpdesk.ctloja.com.br/mastertech"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center bg-mt-blue text-white px-5 py-5 rounded-2xl font-black text-xl active:scale-95 transition-all shadow-xl shadow-mt-blue/20"
